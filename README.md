@@ -1,4 +1,4 @@
-# 🏭 MachineMemory.io
+# 🏭 MachineMemory.physixlabs.com
 
 ### *A Cyber-Physical AI Memory Layer for Industrial Machines*
 
@@ -25,7 +25,15 @@ Dumping raw JSON telemetry into an LLM doesn't work either — it blows the cont
 
 ---
 
-## 💡 The Solution
+![MachineMemory.io — Live Factory Control Room](./Overview.png)
+
+---
+
+## 🤖 AI Plant Manager Agent
+
+![Plant Manager Agent — Episodic Memory Chat](./Chat%20Agent.png)
+
+The agent uses a two-step retrieval-augmented generation (RAG) pipeline:
 
 Instead of storing every raw sensor value, MachineMemory.io transforms machine telemetry into meaningful **episodic memories**.
 
@@ -97,8 +105,6 @@ Mechanical jam forces: **30kW draw** (2.5× baseline), **88°C temperature**, **
 Accelerates the mixer's cumulative energy counter past its **5,000 kWh service threshold**, triggering a predictive maintenance memory before a failure occurs.
 
 ---
-
-## 🤖 AI Plant Manager Agent
 
 The agent uses a two-step retrieval-augmented generation (RAG) pipeline:
 
