@@ -1,0 +1,25 @@
+FROM debian:bookworm-slim
+
+# Install curl for downloading the binary
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Download the Supermemory Local Linux binary
+RUN curl -fsSL \
+  https://github.com/supermemoryai/supermemory/releases/download/server-v0.0.5/supermemory-server-linux-x64 \
+  -o /usr/local/bin/supermemory-server \
+  && chmod +x /usr/local/bin/supermemory-server
+
+# Data directory — mount a volume here to persist memories across restarts
+WORKDIR /app
+ENV SUPERMEMORY_DATA_DIR=/app/.supermemory
+ENV PORT=6767
+
+EXPOSE 6767
+
+# Supermemory will use GROQ_API_KEY (or OPENAI_API_KEY) for memory extraction
+# Set in docker-compose.yml or via -e flag
+# Embeddings default to local Xenova/bge-base-en-v1.5 (no extra API key needed)
+CMD ["/usr/local/bin/supermemory-server"]

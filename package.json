@@ -1,0 +1,14 @@
+{
+  "name": "machinememory-io",
+  "version": "1.0.0",
+  "description": "MachineMemory.io — Cyber-Physical AI Memory Layer for Industrial Machines",
+  "scripts": {
+    "backend": "node backend/index.js",
+    "ui": "cd ui && npx next dev",
+    "supermemory": "npx supermemory local",
+    "supermemory:docker:build": "docker build -f Dockerfile.supermemory -t machinememory-supermemory .",
+    "supermemory:docker:run": "docker compose up supermemory",
+    "dev": "echo \"Start 3 terminals: npm run supermemory:docker:run | npm run backend | npm run ui\""
+  },
+  "private": true
+}
