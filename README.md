@@ -1,6 +1,6 @@
 # 🏭 MachineMemory.physixlabs.com
 
-### *A Cyber-Physical AI Memory Layer for Industrial Machines*
+### *Physical AI Memory Layer for Industrial Machines*
 
 > Built for the [Supermemory Local Hackathon](https://discord.com/invite/WtkvM62fHK) · localhost:6767 · July 9–13, 2026
 
