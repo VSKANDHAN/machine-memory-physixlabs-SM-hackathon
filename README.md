@@ -21,11 +21,11 @@ Current industrial systems store endless time-series logs, forcing engineers to 
 
 Dumping raw JSON telemetry into an LLM doesn't work either — it blows the context window, costs a fortune in tokens, and still can't reason across time.
 
-**That's exactly what MachineMemory.io solves.**
+**That's exactly what MachineMemory solves.**
 
 ---
 
-![MachineMemory.io — Live Factory Control Room](./Overview.png)
+![MachineMemory— Live Factory Control Room](./Overview.png)
 
 ---
 
@@ -35,7 +35,7 @@ Dumping raw JSON telemetry into an LLM doesn't work either — it blows the cont
 
 The agent uses a two-step retrieval-augmented generation (RAG) pipeline:
 
-Instead of storing every raw sensor value, MachineMemory.io transforms machine telemetry into meaningful **episodic memories**.
+Instead of storing every raw sensor value, MachineMemory transforms machine telemetry into meaningful **episodic memories**.
 
 Our statistical middleware continuously monitors live telemetry, detects **state transitions**, **>3σ anomalies**, and **cross-machine energy correlations** — then converts them into human-readable operational memories:
 
@@ -112,7 +112,7 @@ The agent uses a two-step retrieval-augmented generation (RAG) pipeline:
 2. **Reason** — Groq LLM (llama-3.1-8b-instant) synthesizes findings into technical diagnostics
 
 **System prompt:**
-> *"You are the MachineMemory.io Plant Manager Agent. Provide highly technical, objective, and mathematically grounded diagnostics. Always cross-reference machine anomalies with structural energy footprints. Avoid conversational pleasantries."*
+> *"You are the MachineMemory Plant Manager Agent. Provide highly technical, objective, and mathematically grounded diagnostics. Always cross-reference machine anomalies with structural energy footprints. Avoid conversational pleasantries."*
 
 **Try this query after running all three scenarios:**
 > *"Analyze our floor energy consumption and machine behavior logs from the past hour. Identify all operational inefficiencies and structural faults."*
@@ -252,7 +252,7 @@ Invoke-RestMethod -Uri "http://localhost:3001/api/search" `
 
 ## 🌱 Why This Matters
 
-While most AI memory projects focus on remembering **conversations or documents**, MachineMemory.io asks a different question:
+While most AI memory projects focus on remembering **conversations or documents**, MachineMemory asks a different question:
 
 **Can physical machines have memory too?**
 
